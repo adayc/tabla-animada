@@ -1,42 +1,39 @@
-/*
- * Estilos de tu proyecto
- */
-
- /*Configuracion inicial de la página*/
-
- * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    margin:0;
-    padding: 0;
-    
-    
-  }
+#columns{
+  width           : 450px;
+  height          : 450px;
   
-*:before, *:after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-
- /*Declaramos la fuente para toda la página web*/
-body
-{
-    font-family:Lato,'Helvetica Neue',Helvetica,Arial,sans-serif;
 }
 
-.board{
-    margin:100px auto 0;
-    border-collapse:collapse;
+.cell {
+  display:inline-block;
+  font-family     : Arial;
+  text-align      : center;
+  width           : 100px;
+  height          : 100px;
+  background      : #ccc;
+  border          : 1px solid #000;
+  box-shadow      : 1px 1px 5px -1px #000;
+  padding         : 10px;
+  margin-bottom   : 10px;
+  cursor          : pointer;
+  margin: 5px;
 }
-.board td{
-    width:100px;
-    height: 100px;
-    border:  1px solid black;
-    text-align: center;
-    font-size: 30px;
+
+.cell:hover {
+  text-decoration : underline;   
 }
 
-
-
+.red {
+  display:inline-block;
+  font-family     : Arial;
+  text-align      : center;
+  width           : 100px;
+  height          : 100px;
+  background      : red;
+  border          : 1px solid #000;
+  box-shadow      : 1px 1px 5px -1px #000;
+  padding         : 10px;
+  margin-bottom   : 10px;
+  cursor          : pointer;
+  margin: 5px;
+}
