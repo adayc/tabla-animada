@@ -1,12 +1,14 @@
 // Variables 
 var colums = document.getElementById('columns');
-var cells = [['', '', ''], ['', '', ''], ['', '', '']];
+var cells = [['', '', '',''], ['', '', '',''], ['', '', '','']];
+
+
 
 
 window.onload = function() {
   // Creación de las clases con array - etiqueta div 
   for (i = 0; i < 3; i++) {
-    for (j = 0; j < 3; j++) {
+    for (j = 0; j < 4; j++) {
       var newElement = document.createElement('div');
       newElement.id = 'cells[' + i + '][' + j + ']';
       newElement.className = 'cell';
@@ -16,9 +18,11 @@ window.onload = function() {
   }
 
   var i = 1;
-  var j = 1;
+  var j = 2;
     document.getElementById('cells[' + i + '][' + j + ']').classList.add('red');
  
+
+
 
   window .addEventListener('keyup', function(e) {
  
@@ -29,8 +33,10 @@ window.onload = function() {
       i=i-1;
       j=j; 
       if (i>=0 && j>=0 && i<=2) { 
-      document.getElementById('cells[' + (i +1) + '][' + j + ']').classList.remove('red');
-      document.getElementById('cells[' + i  + '][' + j + ']').classList.add('red');
+
+        document.getElementById('cells[' + i  + '][' + j + ']').classList.add('red');
+      document.getElementById('cells[' + (i + 1) + '][' + j + ']').classList.remove('red');
+    
       }
 
     }
@@ -40,8 +46,9 @@ window.onload = function() {
       j=j;
 
       if (i>=0 && j>=0 && i<=2) { 
-        document.getElementById('cells[' + (i -1) + '][' + j + ']').classList.remove('red');
         document.getElementById('cells[' + i  + '][' + j + ']').classList.add('red');
+        document.getElementById('cells[' + (i -1) + '][' + j + ']').classList.remove('red');
+        
         }
       
 
@@ -52,8 +59,9 @@ window.onload = function() {
       j=j-1;
 
       if (i>=0 && j>=0 && j<=2) { 
-        document.getElementById('cells[' + i  + '][' + (j +1) + ']').classList.remove('red');
         document.getElementById('cells[' + i  + '][' + j + ']').classList.add('red');
+        document.getElementById('cells[' + i  + '][' + (j +1) + ']').classList.remove('red');
+        
         }
 
     }
@@ -63,8 +71,9 @@ window.onload = function() {
       j=j+1;
       
       if (i>=0 && j>=0 && j<=2) { 
-        document.getElementById('cells[' + i  + '][' + (j - 1) + ']').classList.remove('red');
         document.getElementById('cells[' + i  + '][' + j + ']').classList.add('red');
+        document.getElementById('cells[' + i  + '][' + (j - 1) + ']').classList.remove('red');
+        
         }
 
       
